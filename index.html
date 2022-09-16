@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/26f1c1277b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="main">
+        <div class="topBar">
+          <h1 class="toplogo">TAFI</h1>
+          <nav class="topNavBar">
+            <ul id="navUl">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </nav>
+
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="welcomeScreen">
+          <h2>Welcome To the World Of Modern Agriculture</h2>
+          <div class="underline"></div>
+          <h1>Farm Like A Pro</h1>
+        </div>
+      </div>
+    </header>
+
+    <script>
+        let icon = document.querySelector('.fa-bars')
+        let menu = document.querySelector('#navUl')
+
+        icon.addEventListener('click', ()=>{
+          menu.classList.toggle('mobile')
+        })
+    </script>
+  </body>
+</html>

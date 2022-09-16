@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*main secreen design including background*/
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),url(https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+/*============topbar design start=====================*/
+.topBar{
+    background-color: rgb(255, 0, 85);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.topBar .toplogo{
+    font-size: 5vmin;
+    z-index: 222;
+}
+
+.topNavBar #navUl{
+    display: flex;
+    list-style: none;
+    transition: .6s all ease;
+
+}
+
+.topNavBar ul li{
+    margin-right: 3rem;
+    padding:.4rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.topNavBar ul li.active{
+    background: rgba(51, 0, 43, 0.671);
+    border-radius: .6rem;
+}
+
+.topNavBar ul li:hover{
+    background: rgba(51, 0, 43, 0.671);
+    border-radius: .6rem;
+}
+
+.topNavBar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    font-size: 3vmin;
+}
+.topBar .fa-bars{
+    display: none;
+    cursor: pointer;
+}
+/*========================topbar end======================*/
+
+/*=======================welcomeScreen design start=======*/
+.welcomeScreen{
+    padding: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.welcomeScreen h2{
+    font-weight: 200;
+    position: relative;
+    font-size: 4vmin;
+}
+.welcomeScreen .underline{
+    background-color: rgb(255, 0, 85);
+    width: 50%;
+    height: .2rem;
+    margin: 1rem 3rem;
+}
+.welcomeScreen h1{
+    font-size: 7vmin;
+    position: relative;
+}
+
+.welcomeScreen h1::after{
+    content: '';
+    width: 5rem;
+    height: 1rem;
+    position: absolute;
+    background-color: rgb(255, 0, 85);
+    top: 100%;
+    right: 0;
+}
+/*=======================welcomeScreen design start========*/
+
+
+/*responsive*/
+
+@media only screen and (max-width: 850px) {
+    .topBar{
+        padding: 1rem 2rem;
+        background: none;
+    }
+    .topBar .fa-bars{
+        display: block;
+        padding: .7rem;
+        z-index: 2222;
+    }
+
+    .topNavBar #navUl{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: -110%;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        background-color:rgb(255, 0, 85);
+        z-index: 111;
+        border-bottom-radius: 40%;
+
+
+    }
+    .topNavBar #navUl.mobile{
+        top: 0;
+    }
+   
+    .topNavBar ul li{
+        margin: 5rem auto 0 auto;
+    }
+
+   
+    .welcomeScreen{
+        padding: 1rem;
+        margin-top: -7rem;
+    }
+
+    .welcomeScreen h1::after{
+        content: '';
+        width: 5rem;
+        height: .3rem;
+        position: absolute;
+        background-color: rgb(255, 0, 85);
+        top: 100%;
+        right: 0;
+    }
+}
